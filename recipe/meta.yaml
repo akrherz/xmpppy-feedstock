@@ -8,13 +8,15 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xmpppy-{{ version }}.tar.gz
   sha256: c5ff61c0fa0ad8b9e521939f944bbcdac0a2375e7ec24201605cc540857e0400
+  patches:
+    - 70.diff
 
 build:
   entry_points:
     - xmpp-message = xmpp.cli:simple_message
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 3
 
 requirements:
   host:
