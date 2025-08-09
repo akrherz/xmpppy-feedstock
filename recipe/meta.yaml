@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xmpppy-{{ version }}.tar.gz
   sha256: 449bb158f99fd6cdd1e33dd52bc5a09aa79b7e4cc39fcd14f501ca3ecdec0f4e
-  patches:
-    - 70.diff
 
 build:
   entry_points:
